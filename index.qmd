@@ -12,60 +12,61 @@ format:
       - assets/css/styles-index.css
 ---
 
-::: {#particles-js}
+:::: {#particles-js}
 ::: {#particles-text}
 ## EconDataverse
 
 A universe of open-source packages to work seamlessly with economic data in R and Python
-
 :::
-:::
+::::
 
-::: {#index-text}
+:::: {#index-text}
 ## Goal
 
-While much economic data is accessible through public APIs, many of it is only available in static formats, such as spreadsheets or reports, requiring manual downloading or scraping. The landscape of economic data tools is also **highly fragmented**, with packages that vary significantly in design, syntax, and usability. These inconsistencies create significant inefficiencies for analysts and researchers who rely on multi-source data. 
+While much economic data is accessible through public APIs, many of it is only available in static formats, such as spreadsheets or reports, requiring manual downloading or scraping. The landscape of economic data tools is also **highly fragmented**, with packages that vary significantly in design, syntax, and usability. These inconsistencies create significant inefficiencies for analysts and researchers who rely on multi-source data.
 
 The EconDataverse addresses these challenges by establishing a **standardized**, **cross-language** framework, enabling users to access, explore, and analyze economic data seamlessly, regardless of its original format. By offering consistent function names, tidy data outputs, and multi-language compatibility, the EconDataverse aims to eliminate these common obstacles, empowering users to **focus on research** and **analysis** rather than data acquisition and cleaning.
 
 ## Ecosystem
 
-The ecosystem is the result of a curated collection of R packages and Python libraries developed in parallel by the [ONE Campaign](https://github.com/ONEcampaign), [Tidy Intelligence](https://github.com/tidy-intelligence), [Teal Insights](https://github.com/Teal-Insights), and [Promptly Technologies](https://github.com/Promptly-Technologies-LLC). 
+The ecosystem is the result of a curated collection of R packages and Python libraries developed in parallel by the [ONE Campaign](https://github.com/ONEcampaign), [Tidy Intelligence](https://github.com/tidy-intelligence), [Teal Insights](https://github.com/Teal-Insights), and [Promptly Technologies](https://github.com/Promptly-Technologies-LLC).
 
-:::: {.table-wrapper}
-| Institution    | Data Source                         | R                                                        | Python                                                    |
-|----------------|-------------------------------------|:--------------------------------------------------------:|:---------------------------------------------------------:|
-| World Bank     | World Development Indicators (WDI)  | [wbwdi](https://github.com/tidy-intelligence/r-wbwdi) | [wbwdi](https://github.com/tidy-intelligence/py-wbwdi) |
-| World Bank     | International Debt Statistics (IDS) | [wbids](https://github.com/Teal-Insights/r-wbids)     |                                                       |
+::: table-wrapper
+| Institution | Data Source | R | Python |
+|-----------------|-----------------|:-----------------:|:------------------:|
+| EconDataverse | Various | [econdatasets](https://tidy-intelligence.github.io/r-econdatasets/) |  |
+| World Bank | World Development Indicators (WDI) | [wbwdi](https://github.com/tidy-intelligence/r-wbwdi) | [wbwdi](https://github.com/tidy-intelligence/py-wbwdi) |
+| World Bank | International Debt Statistics (IDS) | [wbids](https://github.com/Teal-Insights/r-wbids) |  |
 | IMF | World Economic Outlook (WEO) | [imfweo](https://github.com/Teal-Insights/imfweo) | [imf-reader](https://github.com/ONEcampaign/imf-reader) |
 | IMF | Special Drawing Rights (SDR) |  | [imf-reader](https://github.com/ONEcampaign/imf-reader) |
 | OECD | Official Development Assistance (ODA) | [oecdoda](https://github.com/tidy-intelligence/r-oecdoda) | [oda-reader](https://github.com/ONEcampaign/oda_reader) |
-| Our World In Data | Chart API | [owidapi](https://github.com/tidy-intelligence/r-owidapi) | |
+| Our World In Data | Chart API | [owidapi](https://github.com/tidy-intelligence/r-owidapi) |  |
 | UNESCO | Institute of Statistics (UIS) API | [uisapi](https://github.com/tidy-intelligence/r-uisapi) | [unesco-reader](https://pypi.org/project/unesco-reader) |
-::::
+:::
 
-In addition, there are packages that facilitate economic analysis: 
+In addition, there are packages that facilitate economic analysis:
 
-Challenge | R                                                        | Python                                                    |
-|----------------|:--------------------------------------------------------:|:---------------------------------------------------------:|
+| Challenge | R | Python |
+|------------------|:-------------------------:|:--------------------------:|
+| Metapackage | [econdateverse](https://tidy-intelligence.github.io/r-econdataverse/) |  |
 | Combining Data Sources | [econtools](https://github.com/tidy-intelligence/r-econtools) | [bblocks](https://github.com/ONEcampaign/bblocks) |
-| Standardizing Identifiers | [econid](https://github.com/Teal-Insights/r-econid) | |
+| Standardizing Identifiers | [econid](https://github.com/Teal-Insights/r-econid) |  |
 
 If you want to **contribute a package** that you maintain, please create an issue on [GitHub](https://github.com/econdataverse/website/issues).
 
 ## Principles
 
-### Consistent Interface 
+### Consistent Interface
 
 Every package within the EconDataverse follows a standardized interface with **predictable patterns**. For instance, functions for data retrieval are named consistently: `*_get` functions retrieve data from a specific online source, `*_list` functions enumerate pre-computed resources.
 
 ### Coding Style
 
-For R packages, the EconDataverse adopts the tidyverse coding style and enforces it through `{lintr}`. For Python, we use the same naming conventions, but respect style conventions layed out in PEP 8. These styles enhance the **readability** of code and align with the practices of users familiar with the corresponding language. 
+For R packages, the EconDataverse adopts the tidyverse coding style and enforces it through `{lintr}`. For Python, we use the same naming conventions, but respect style conventions layed out in PEP 8. These styles enhance the **readability** of code and align with the practices of users familiar with the corresponding language.
 
 ### Tidy Data Outputs
 
-All packages return data in a tidy format, with each variable as a column, each observation as a row, and each data type as a table. Defaulting to tidy data ensures **compatibility** with popular data manipulation and visualization libraries in both R and Python. 
+All packages return data in a tidy format, with each variable as a column, each observation as a row, and each data type as a table. Defaulting to tidy data ensures **compatibility** with popular data manipulation and visualization libraries in both R and Python.
 
 ### Comprehensive Unit Testing
 
@@ -79,9 +80,9 @@ All packages are released under the MIT License, which permits wide usage and mo
 
 Wherever feasible, EconDataverse interfaces are designed to work across languages. Consistency across languages enables analysts and researchers to incorporate these tools into various projects, regardless of language preference, and fosters a **collaborative**, multi-lingual community.
 
-## Collaborators 
+## Collaborators
 
-The following companies currently collaborate on building the EconDataverse ecosystem: 
+The following companies currently collaborate on building the EconDataverse ecosystem:
 
 ```{=html}
 <div class="sponsor-logos">
@@ -101,5 +102,4 @@ The following companies currently collaborate on building the EconDataverse ecos
 ```
 
 If you want to **request** the development of a package for a **data source of your choice**, please get in touch with [Christoph Scheuch](https://www.tidy-intelligence.com).
-
-:::
+::::
